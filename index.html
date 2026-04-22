@@ -1,263 +1,326 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- =============================================
+         META ESENCIALES
+    ============================================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOBLE Z SOLAR - Energía que se paga sola</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Título y Descripción SEO -->
+    <title>DOBLE Z SOLAR | Paneles Solares en República Dominicana</title>
+    <meta name="description" content="Instala paneles solares en tu hogar o negocio. Doble Z Solar ofrece energía solar a precio fijo, menor que la EDE, con mantenimiento incluido en RD. ☀️ Llámanos: 849-273-5821">
+    <meta name="keywords" content="paneles solares República Dominicana, energía solar RD, instalación solar sin inversión, DOBLE Z SOLAR, energía renovable Santo Domingo, bajar factura eléctrica RD">
+    <meta name="author" content="DOBLE Z SOLAR">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Canonical URL (actualiza con tu dominio real) -->
+    <link rel="canonical" href="https://www.doblezsolar.com/">
+
+    <!-- =============================================
+         OPEN GRAPH (Facebook, WhatsApp, LinkedIn)
+    ============================================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.doblezsolar.com/">
+    <meta property="og:title" content="DOBLE Z SOLAR | Energía Solar Sin Inversión Inicial en RD">
+    <meta property="og:description" content="Instalamos paneles solares en tu techo sin costo inicial. Paga menos que la EDE, con mantenimiento y seguro incluido. ¡Solicita tu evaluación gratis!">
+    <meta property="og:image" content="https://www.doblezsolar.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_DO">
+    <meta property="og:site_name" content="DOBLE Z SOLAR">
+
+    <!-- =============================================
+         TWITTER CARDS
+    ============================================= -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DOBLE Z SOLAR | Energía Solar Sin Inversión Inicial en RD">
+    <meta name="twitter:description" content="Instalamos paneles solares en tu techo sin costo inicial. Paga menos que la EDE con mantenimiento incluido.">
+    <meta name="twitter:image" content="https://www.doblezsolar.com/og-image.jpg">
+
+    <!-- =============================================
+         PRECONNECT / PRELOAD (rendimiento)
+    ============================================= -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="isotipo.png" as="image">
+
+    <!-- =============================================
+         FAVICON
+    ============================================= -->
+    <link rel="icon" type="image/png" href="isotipo.png">
+    <link rel="apple-touch-icon" href="isotipo.png">
+
+    <!-- =============================================
+         ESTILOS
+    ============================================= -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --verde-solar: #228B22;
-            --amarillo-solar: #ecab0f;
-            --verde-claro: #90ee90;
-            --gris-suave: #f4f7f6;
-            --whatsapp-color: #25d366;
-            --azul-corporativo: #0a3d62;
-        }
+    <link rel="stylesheet" href="css/styles.css">
 
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0;
-            line-height: 1.6; 
-            color: #333; 
-            background-color: #fff;
-            scroll-behavior: smooth;
-        }
-
-        /* Encabezado */
-        header { 
-            background: white; 
-            padding: 10px 5%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-            border-bottom: 2px solid var(--gris-suave);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-nav {
-            height: 50px;
-            width: auto;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        nav a { 
-            text-decoration: none; 
-            color: #333; 
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        nav a:hover { color: var(--verde-solar); }
-
-        .btn-evaluacion {
-            background-color: var(--whatsapp-color);
-            color: white !important;
-            padding: 10px 20px;
-            border-radius: 25px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Botón Flotante */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: var(--whatsapp-color);
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 1001;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .whatsapp-float:hover { transform: scale(1.1); }
-
-        /* Hero Section */
-        .hero { 
-            background: linear-gradient(rgba(10, 61, 98, 0.85), rgba(10, 61, 98, 0.85)),
-                        url('proyecto3.jpeg'); /* Usando una de tus fotos de fondo */
-            background-size: cover;
-            background-position: center;
-            color: white; 
-            padding: 100px 5%; 
-            text-align: center; 
-        }
-
-        .hero-logo {
-            max-width: 220px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
-        .hero p { font-size: 1.2rem; margin-bottom: 35px; max-width: 800px; margin-inline: auto; }
-
-        /* Secciones Generales */
-        section { padding: 70px 5%; }
-        h2 { text-align: center; font-size: 2rem; color: var(--azul-corporativo); margin-bottom: 40px; }
-
-        /* Tabla Comparativa */
-        .comparativa { background: var(--gris-suave); }
-        .table-container { overflow-x: auto; }
-        table { width: 100%; max-width: 900px; margin: 0 auto; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        th, td { padding: 18px; border-bottom: 1px solid #ddd; text-align: center; }
-        th { background: var(--azul-corporativo); color: white; }
-
-        /* Ahorro Card */
-        .ahorro-card {
-            background: white; 
-            border-left: 8px solid var(--verde-solar); 
-            padding: 30px;
-            max-width: 650px; 
-            margin: 40px auto 0; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 0 15px 15px 0;
-        }
-
-        /* Galería de Proyectos */
-        .galeria {
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px; 
-        }
-        .galeria-item { overflow: hidden; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background: #eee; }
-        .galeria-item img { 
-            width: 100%; 
-            height: 300px; 
-            object-fit: cover; 
-            transition: 0.5s;
-            display: block;
-        }
-        .galeria-item img:hover { transform: scale(1.05); }
-
-        /* Botón de Acción Final */
-        .cta-container { text-align: center; padding: 50px 5%; }
-        .cta-button { 
-            background: var(--amarillo-solar); 
-            color: #333; 
-            padding: 20px 40px; 
-            text-decoration: none; 
-            font-size: 1.3rem; 
-            font-weight: bold; 
-            border-radius: 50px;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            transition: 0.3s;
-        }
-        .cta-button:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(236, 171, 15, 0.4); }
-
-        footer { background: #1a1a1a; color: white; padding: 40px 5%; text-align: center; }
-        footer p { margin: 5px 0; opacity: 0.8; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            nav a:not(.btn-evaluacion) { display: none; }
-        }
-    </style>
+    <!-- =============================================
+         SCHEMA.ORG JSON-LD (Datos Estructurados)
+         → Le dice a Google exactamente quién eres
+    ============================================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.doblezsolar.com/#business",
+      "name": "DOBLE Z SOLAR",
+      "description": "Empresa de instalación de paneles solares en República Dominicana. Sin inversión inicial, precio fijo, mantenimiento incluido.",
+      "url": "https://www.doblezsolar.com",
+      "logo": "https://www.doblezsolar.com/isotipo.png",
+      "image": "https://www.doblezsolar.com/og-image.jpg",
+      "telephone": "+18492735821",
+      "priceRange": "$$",
+      "currenciesAccepted": "DOP, USD",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "areaServed": {
+        "@type": "Country",
+        "name": "República Dominicana"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "DO",
+        "addressRegion": "Distrito Nacional"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+18492735821",
+        "contactType": "customer service",
+        "availableLanguage": "Spanish",
+        "contactOption": "TollFree"
+      },
+      "sameAs": [
+        "https://wa.me/18492735821"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Energía Solar",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Instalación de Paneles Solares",
+            "description": "Instalación de paneles solares sin costo inicial con mantenimiento incluido.",
+            "priceCurrency": "DOP"
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
 
-    <a href="https://wa.me/18492735821?text=Hola%20DOBLE%20Z%20SOLAR,%20necesito%20una%20evaluación%20para%20mi%20casa/negocio." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+    <!-- =============================================
+         BOTÓN FLOTANTE WHATSAPP
+    ============================================= -->
+    <a  href="https://wa.me/18492735821?text=Hola%20DOBLE%20Z%20SOLAR,%20necesito%20una%20evaluación%20para%20mi%20casa/negocio."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar a DOBLE Z SOLAR por WhatsApp"
+        data-cta="whatsapp_flotante">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
-    <header>
-        <a href="#"><img src="logo.jpeg" alt="DOBLE Z SOLAR" class="logo-nav"></a>
-        <nav>
-            <a href="#comparativa">Beneficios</a>
+    <!-- =============================================
+         HEADER
+    ============================================= -->
+    <header class="site-header" role="banner">
+        <a href="/" aria-label="Inicio - DOBLE Z SOLAR">
+            <img src="isotipo.png" alt="DOBLE Z SOLAR - Energía Solar en República Dominicana" class="logo-nav" width="50" height="50">
+        </a>
+        <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+            <a href="#beneficios">Beneficios</a>
             <a href="#proyectos">Proyectos</a>
-            <a href="https://wa.me/18492735821?text=Hola%20DOBLE%20Z%20SOLAR,%20vengo%20desde%20la%20web." class="btn-evaluacion" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp
+            <a  href="https://wa.me/18492735821?text=Hola%20DOBLE%20Z%20SOLAR,%20vengo%20desde%20la%20web."
+                class="btn-whatsapp-nav"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contactar por WhatsApp"
+                data-cta="whatsapp_nav">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
             </a>
         </nav>
     </header>
 
-    <section class="hero">
-        <img src="logo.jpeg" alt="Logo DOBLE Z SOLAR" class="hero-logo">
-        <h1>Energía Solar con CERO Inversión</h1>
-        <p>Instalamos los paneles en tu techo sin costo inicial. Paga solo por la energía que consumes a un precio mucho menor que la red eléctrica en RD.</p>
-        <a href="#comparativa" class="cta-button" style="font-size: 1rem; padding: 12px 25px; background: white;">Descubrir Ahorro</a>
-    </section>
+    <!-- =============================================
+         MAIN CONTENT
+    ============================================= -->
+    <main id="main-content">
 
-    <section id="comparativa" class="comparativa">
-        <h2>¿Por qué cambiarte a DOBLE Z SOLAR?</h2>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Beneficio</th>
-                        <th>DOBLE Z SOLAR ☀️</th>
-                        <th>Red Eléctrica 🔌</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Precio por kWh</td><td>Fijo y Reducido</td><td>Variable y Caro</td></tr>
-                    <tr><td>Mantenimiento y Seguro</td><td>Incluido GRATIS</td><td>No existe</td></tr>
-                    <tr><td>Impacto Ambiental</td><td>100% Limpio</td><td>Contaminante</td></tr>
-                </tbody>
-            </table>
+        <!-- HERO -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <img src="isotipo.png" alt="Logo DOBLE Z SOLAR" class="hero-logo" width="220" height="220">
+            <h1 id="hero-heading">Energía Solar con CERO Inversión Inicial</h1>
+            <p>Instalamos los paneles en tu techo <strong>sin costo de entrada</strong>. Paga solo por la energía que consumes, a un precio fijo y mucho menor que la red eléctrica en República Dominicana.</p>
+            <a href="#beneficios" class="btn-hero" aria-label="Ver beneficios de Doble Z Solar">
+                <i class="fas fa-bolt" aria-hidden="true"></i> Descubrir Ahorro
+            </a>
+        </section>
+
+        <!-- BENEFICIOS / COMPARATIVA -->
+        <section id="beneficios" class="section-beneficios" aria-labelledby="beneficios-heading">
+            <h2 id="beneficios-heading" class="section-title">¿Por qué cambiarte a DOBLE Z SOLAR?</h2>
+
+            <!-- Tabla comparativa -->
+            <div class="table-container" role="region" aria-label="Tabla comparativa de beneficios">
+                <table class="tabla-comparativa">
+                    <thead>
+                        <tr>
+                            <th scope="col">Beneficio</th>
+                            <th scope="col">DOBLE Z SOLAR ☀️</th>
+                            <th scope="col">Red Eléctrica 🔌</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Precio por kWh</td>
+                            <td><strong>Fijo y Reducido</strong></td>
+                            <td>Variable y Caro</td>
+                        </tr>
+                        <tr>
+                            <td>Mantenimiento y Seguro</td>
+                            <td><strong>Incluido GRATIS</strong></td>
+                            <td>No existe</td>
+                        </tr>
+                        <tr>
+                            <td>Impacto Ambiental</td>
+                            <td><strong>100% Limpio</strong></td>
+                            <td>Contaminante</td>
+                        </tr>
+                        <tr>
+                            <td>Inversión Inicial</td>
+                            <td><strong>CERO (RD$0)</strong></td>
+                            <td>Facturas cada mes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tarjeta de ahorro -->
+            <div class="ahorro-card" role="complementary" aria-label="Ejemplo de ahorro real">
+                <h3>📊 Ejemplo de Ahorro Real en RD</h3>
+                <p>Para un consumo promedio de <strong>1,000 kWh al mes</strong>:</p>
+                <p class="precio-ede">Factura EDE: ~RD$13,590.00</p>
+                <p class="precio-solar">Cuota DOBLE Z: RD$8,000.00</p>
+                <p class="ahorro-anual">¡Ahorras <strong>RD$67,080 al año</strong>! 💸</p>
+            </div>
+
+            <!-- Iconos de beneficios -->
+            <div class="beneficios-grid" aria-label="Características principales">
+                <div class="beneficio-item">
+                    <div class="icono" aria-hidden="true"><i class="fas fa-solar-panel"></i></div>
+                    <h3>Sin Inversión</h3>
+                    <p>Paneles instalados en el techo de tu casa.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="icono" aria-hidden="true"><i class="fas fa-tools"></i></div>
+                    <h3>Mantenimiento Gratis</h3>
+                    <p>Nos encargamos de todo, sin costos ocultos.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="icono" aria-hidden="true"><i class="fas fa-leaf"></i></div>
+                    <h3>100% Verde</h3>
+                    <p>Energía limpia que reduce tu huella de carbono.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="icono" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Seguro Incluido</h3>
+                    <p>Tu sistema está protegido desde el día uno.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="section-proyectos" aria-labelledby="proyectos-heading">
+            <h2 id="proyectos-heading" class="section-title">Nuestros Proyectos en el País</h2>
+            <div class="galeria" role="list">
+                <div class="galeria-item" role="listitem">
+                    <img src="proyecto1.jpeg"
+                         alt="Equipo de técnicos de Doble Z Solar instalando paneles en tejado residencial"
+                         loading="lazy"
+                         width="400" height="300">
+                    <div class="galeria-overlay">Instalación Residencial</div>
+                </div>
+                <div class="galeria-item" role="listitem">
+                    <img src="proyecto2.jpeg"
+                         alt="Proceso de instalación técnica de sistema fotovoltaico por Doble Z Solar"
+                         loading="lazy"
+                         width="400" height="300">
+                    <div class="galeria-overlay">Sistema Fotovoltaico</div>
+                </div>
+                <div class="galeria-item" role="listitem">
+                    <img src="proyecto3.jpeg"
+                         alt="Sistema de paneles solares completamente instalado y operativo"
+                         loading="lazy"
+                         width="400" height="300">
+                    <div class="galeria-overlay">Sistema Completo</div>
+                </div>
+                <div class="galeria-item" role="listitem">
+                    <img src="proyecto4.jpeg"
+                         alt="Vista aérea de proyecto solar comercial de gran escala"
+                         loading="lazy"
+                         width="400" height="300">
+                    <div class="galeria-overlay">Proyecto Comercial</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="section-cta" aria-labelledby="cta-heading">
+            <h2 id="cta-heading">¿Listo para dejar de pagar de más?</h2>
+            <p>Sin compromisos. Evaluamos tu techo hoy mismo, completamente gratis.</p>
+            <a  href="https://wa.me/18492735821?text=Hola,%20quiero%20solicitar%20mi%20evaluación%20gratuita%20de%20paneles%20solares."
+                class="btn-cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Solicitar evaluación gratuita por WhatsApp"
+                data-cta="whatsapp_cta_final">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i> ¡Quiero mi Evaluación Gratuita!
+            </a>
+        </section>
+
+    </main><!-- /main -->
+
+    <!-- =============================================
+         FOOTER
+    ============================================= -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>DOBLE Z SOLAR</h4>
+                <p>Energía solar accesible para todos los dominicanos. Sin inversión, sin letra chica.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <a href="tel:+18492735821" aria-label="Llamar a Doble Z Solar">📞 849-273-5821</a>
+                <a href="https://wa.me/18492735821" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Doble Z Solar">💬 WhatsApp</a>
+            </div>
+            <div class="footer-col">
+                <h4>Cobertura</h4>
+                <p>📍 Toda la República Dominicana</p>
+                <p>⏰ Soporte 24/7</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <a href="#beneficios">Beneficios</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="https://wa.me/18492735821" target="_blank" rel="noopener noreferrer">Contacto</a>
+            </div>
         </div>
-
-        <div class="ahorro-card">
-           <h3>📊 Ejemplo de Ahorro Real en RD</h3>
-            <p>Para un consumo promedio de 1000 kW al mes:</p>
-            <p style="text-decoration: line-through; color: #ff0000; margin-bottom: 5px; font-weight: 500;">Factura EDE: ~$13,590.00</p>
-            
-            <p style="font-size: 1.6rem; color: var(--verde-solar); font-weight: bold; margin: 0;">Cuota DOBLE Z: $8,000.00</p>
-            <p style="color: var(--verde-solar); font-weight: bold; font-size: 1.2rem; margin-top: 10px;">¡Ahorras RD$ 67,080 al año! 💸</p>
+        <div class="footer-bottom">
+            <p>© <span id="current-year">2026</span> DOBLE Z SOLAR · Energía que se paga sola · República Dominicana</p>
         </div>
-    </section>
-
-    <section id="proyectos">
-        <h2>Nuestros Proyectos en el País</h2>
-        <div class="galeria">
-            <div class="galeria-item">
-                <img src="proyecto1.jpeg" alt="Equipo de instalación Doble Z Solar">
-            </div>
-            <div class="galeria-item">
-                <img src="proyecto2.jpeg" alt="Proceso de instalación técnica">
-            </div>
-            <div class="galeria-item">
-                <img src="proyecto3.jpeg" alt="Sistema de paneles solares instalado">
-            </div>
-            <div class="galeria-item">
-                <img src="proyecto4.jpeg" alt="Vista aérea de proyecto solar">
-            </div>
-        </div>
-    </section>
-
-    <div class="cta-container">
-        <a href="https://wa.me/18492735821?text=Hola,%20quiero%20solicitar%20mi%20evaluación%20gratuita." class="cta-button" target="_blank">
-            <i class="fab fa-whatsapp"></i> ¡Quiero mi evaluación gratuita!
-        </a>
-        <p style="margin-top: 15px; color: #666;">Sin compromisos, evaluamos tu techo hoy mismo.</p>
-    </div>
-
-    <footer>
-        <p>📍 Soporte 24/7 en toda la República Dominicana</p>
-        <p>📞 Contacto Directo: 849-273-5821</p>
-        <p>© 2026 DOBLE Z SOLAR - Energía que se paga sola.</p>
     </footer>
+
+    <!-- =============================================
+         SCRIPTS
+    ============================================= -->
+    <script src="js/main.js" defer></script>
 
 </body>
 </html>

@@ -1,0 +1,527 @@
+/* ============================================
+   DOBLE Z SOLAR - Hoja de Estilos Principal
+   Versión: 2.0 | Abril 2026
+   ============================================ */
+
+/* --- Variables CSS --- */
+:root {
+    --verde-solar: #228B22;
+    --amarillo-solar: #ecab0f;
+    --verde-claro: #90ee90;
+    --gris-suave: #f4f7f6;
+    --whatsapp-color: #25d366;
+    --azul-corporativo: #0a3d62;
+    --texto-principal: #333333;
+    --blanco: #ffffff;
+    --sombra-suave: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --radio-btn: 50px;
+    --radio-card: 15px;
+    --transicion: all 0.3s ease;
+}
+
+/* --- Reset y Base --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--texto-principal);
+    background-color: var(--blanco);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Header / Navegación --- */
+.site-header {
+    background: var(--blanco);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--gris-suave);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.logo-nav {
+    height: 50px;
+    width: auto;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.site-nav a {
+    font-weight: 600;
+    transition: var(--transicion);
+    color: var(--texto-principal);
+}
+
+.site-nav a:hover {
+    color: var(--verde-solar);
+}
+
+.btn-whatsapp-nav {
+    background-color: var(--whatsapp-color);
+    color: var(--blanco) !important;
+    padding: 10px 20px;
+    border-radius: var(--radio-btn);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-whatsapp-nav:hover {
+    background-color: #1ebe5b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* --- Botón Flotante WhatsApp --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--whatsapp-color);
+    color: var(--blanco);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicion);
+    aria-label: "Contactar por WhatsApp";
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* Pulso animado */
+.whatsapp-float::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--whatsapp-color);
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    70% { transform: scale(1.4); opacity: 0; }
+    100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(10, 61, 98, 0.87), rgba(10, 61, 98, 0.87)),
+                url('../proyecto3.jpeg') center/cover no-repeat;
+    color: var(--blanco);
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.hero-logo {
+    max-width: 220px;
+    margin: 0 auto 20px;
+    border-radius: var(--radio-card);
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    max-width: 800px;
+    margin-inline: auto;
+    opacity: 0.95;
+}
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blanco);
+    color: var(--azul-corporativo) !important;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: var(--radio-btn);
+    transition: var(--transicion);
+}
+
+.btn-hero:hover {
+    background: var(--amarillo-solar);
+    color: #111 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(236, 171, 15, 0.4);
+}
+
+/* --- Sección Beneficios / Comparativa --- */
+.section-beneficios {
+    background: var(--gris-suave);
+    padding: 70px 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--azul-corporativo);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--amarillo-solar);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.tabla-comparativa {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: var(--blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+}
+
+.tabla-comparativa th,
+.tabla-comparativa td {
+    padding: 18px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.tabla-comparativa thead th {
+    background: var(--azul-corporativo);
+    color: var(--blanco);
+    font-size: 1rem;
+}
+
+.tabla-comparativa tbody tr:hover {
+    background-color: #f0f8ff;
+    transition: background 0.2s;
+}
+
+/* --- Tarjeta de Ahorro --- */
+.ahorro-card {
+    background: var(--blanco);
+    border-left: 8px solid var(--verde-solar);
+    padding: 30px;
+    max-width: 650px;
+    margin: 40px auto 0;
+    box-shadow: var(--sombra-media);
+    border-radius: 0 var(--radio-card) var(--radio-card) 0;
+}
+
+.ahorro-card h3 {
+    font-size: 1.4rem;
+    color: var(--azul-corporativo);
+    margin-bottom: 10px;
+}
+
+.precio-ede {
+    text-decoration: line-through;
+    color: #e53935;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.precio-solar {
+    font-size: 1.6rem;
+    color: var(--verde-solar);
+    font-weight: 800;
+    margin: 0;
+}
+
+.ahorro-anual {
+    color: var(--verde-solar);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* --- Beneficios Visuales (iconos) --- */
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 50px auto 0;
+}
+
+.beneficio-item {
+    background: var(--blanco);
+    border-radius: var(--radio-card);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+}
+
+.beneficio-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-media);
+}
+
+.beneficio-item .icono {
+    font-size: 2.5rem;
+    color: var(--verde-solar);
+    margin-bottom: 12px;
+}
+
+.beneficio-item h3 {
+    font-size: 1rem;
+    color: var(--azul-corporativo);
+    margin-bottom: 8px;
+}
+
+.beneficio-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Sección Proyectos --- */
+.section-proyectos {
+    padding: 70px 5%;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: var(--radio-card);
+    box-shadow: var(--sombra-suave);
+    background: #eee;
+    position: relative;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+.galeria-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(10,61,98,0.8));
+    color: var(--blanco);
+    padding: 20px 15px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover .galeria-overlay {
+    transform: translateY(0);
+}
+
+/* --- CTA Final --- */
+.section-cta {
+    text-align: center;
+    padding: 60px 5%;
+    background: linear-gradient(135deg, var(--azul-corporativo), #0d5a96);
+    color: var(--blanco);
+}
+
+.section-cta h2 {
+    color: var(--blanco);
+    margin-bottom: 15px;
+}
+
+.section-cta p {
+    margin-bottom: 30px;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.btn-cta {
+    background: var(--amarillo-solar);
+    color: #222;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: var(--radio-btn);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transicion);
+}
+
+.btn-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(236, 171, 15, 0.5);
+    background: #f5b800;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background: #1a1a1a;
+    color: var(--blanco);
+    padding: 50px 5% 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    color: var(--amarillo-solar);
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footer-col p,
+.footer-col a {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 8px;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+.footer-col a:hover {
+    opacity: 1;
+    color: var(--amarillo-solar);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* --- Utilidades --- */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .site-nav a:not(.btn-whatsapp-nav) {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .btn-cta {
+        font-size: 1rem;
+        padding: 15px 25px;
+    }
+
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .ahorro-card {
+        padding: 20px;
+    }
+}

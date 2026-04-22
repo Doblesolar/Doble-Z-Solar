@@ -1,0 +1,12 @@
+# robots.txt - DOBLE Z SOLAR
+# https://www.doblezsolar.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Bloquear carpetas internas (si existiesen)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://www.doblezsolar.com/sitemap.xml
